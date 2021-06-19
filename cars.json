@@ -1,0 +1,22 @@
+{
+    "1": {
+        "id": 1,
+        "name": "test",
+        "make": "test",
+        "year": "2011",
+        "fuel": "petrol",
+        "trans": "automatic",
+        "assigned": false,
+        "assigned_to": null
+    },
+    "2": {
+        "id": 2,
+        "name": "test",
+        "make": "test",
+        "year": "2011",
+        "fuel": "petrol",
+        "trans": "automatic",
+        "assigned": false,
+        "assigned_to": null
+    }
+}

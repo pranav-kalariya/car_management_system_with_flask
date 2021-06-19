@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+        h1 {
+            color: #f2f2f2; 
+            background-color: #030303;
+        }
+        /* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #1d04aa;
+    color: white;
+  }
+  .topnav-right {
+  float: right;
+}
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+        <a href="/home/add_car">Add Car</a>
+        <a href="/home/delete_car">Delete Car</a>
+        <a href="/home/details">Car Details</a>
+        <div class= "topnav-right">
+          <a href="/logout" id= "logout">Log Out</a>
+        </div>
+    </div>
+    {% block content %}
+        <div class="container">
+            {% block page_content %}{% endblock %}
+        </div>
+    {% endblock %}
+  </body>
+</html>

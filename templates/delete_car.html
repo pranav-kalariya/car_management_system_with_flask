@@ -1,0 +1,24 @@
+{% extends "manager.html" %}
+{% block title %}Add Car{% endblock %}
+
+{% block page_content %}
+<style>
+    button {
+  background-color: #000e01; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+<p style="color:red">{{ err_msg }}</p>
+<form action = "http://localhost:5000/home/delete_car" method = "POST">
+   <p>Enter ID of the car you want to delete</p>
+    <p>ID <input required name="id" id="id" type = "text" /></p>
+    <button type="submit">Delete</button>
+</form>
+<p style="color:blue">{{ msg }}</p>
+{% endblock %}

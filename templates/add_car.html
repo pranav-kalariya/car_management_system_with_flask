@@ -1,0 +1,49 @@
+{% extends "manager.html" %}
+{% block title %}Add Car{% endblock %}
+
+{% block page_content %}
+{{ err_msg }}
+<style>
+   input[type=submit] {
+ background-color: #000e01; /* Green */
+ border: none;
+ color: white;
+ padding: 15px 32px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+</style>
+<form action = "http://localhost:5000/home/Add-Car" method = "POST">
+   <p><b>Name</b> <input required name="name" id="name" type = "text" /></p>
+   <p><b>Make</b> <input required id="make" name="make" type = "text" /></p>
+   <p><b>Year</b> <input required name="year" id="year" type = "range" min="2000" max="2021" value="2000" oninput="this.nextElementSibling.value = this.value"/><output>2000</output></p>
+   <p><b>Fuel Type</b></br>
+       <label for="Petrol">Petrol</label>
+       <input  type="radio" id="petrol" name="fuel"  value="petrol" required>
+       <label for="diesel">Diesel</label>
+       <input type="radio" id="diesel" name="fuel"  value="diesel" >
+       <label for="cng">CNG</label>
+       <input type="radio" id="cng" name="fuel"  value="cng" >
+       <br>     
+    </p>
+   <p><b>Transmission Type</b> </br>
+      <label for="automatic">Automatic</label>
+      <input  type="radio" id="automatic" name="transmission"  value="automatic" required>
+      <label for="manual">Manual</label>
+      <input type="radio" id="manual" name="transmission"  value="manual" >       
+   </p>
+   
+   <p><input type = "submit" value = "Add" /></p>
+</form>
+<p style="color:blue">{{ msg }}</p>
+{% endblock %}

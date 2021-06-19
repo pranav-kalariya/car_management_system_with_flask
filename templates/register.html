@@ -1,0 +1,38 @@
+<html>
+   <style>
+      /* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  background-color: #000000; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+   </style>
+   <body>
+      <form action = "http://localhost:5000/register" method = "POST">
+         <p>
+            <label for="manager">Manager</label>
+            <input  type="radio" id="manager" name="role" checked value="manager" required>
+            <label for="customer">Customer</label>
+            <input type="radio" id="customer" name="role"  value="customer" >
+            <br>          
+         </p>
+         <p>Username <input required name="username" id="username" type = "text" /></p>
+         <p>Password <input required id="password" name="password" type = "password" /></p>
+         <p><input type = "submit" value = "Register" /></p>
+      </form>
+   </body>
+</html>
